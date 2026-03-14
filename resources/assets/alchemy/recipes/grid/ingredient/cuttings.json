@@ -1,6 +1,7 @@
 [
   {
     "ingredientPattern": "KF",
+    "requiresTrait": "carefultouch",
     "ingredients": {
       "F": {
         "type": "block",
