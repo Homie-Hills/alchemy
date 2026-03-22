@@ -5,11 +5,12 @@ namespace Alchemy.Block
 {
     public class BlockHerbRacks : Vintagestory.API.Common.Block
     {
+        /*
         public override bool DoPartialSelection(IWorldAccessor world, BlockPos pos)
         {
             return true;
         }
-
+        */
         public override bool OnBlockInteractStart(
             IWorldAccessor world,
             IPlayer byPlayer,

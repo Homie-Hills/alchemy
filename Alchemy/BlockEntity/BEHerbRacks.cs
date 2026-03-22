@@ -71,7 +71,7 @@ namespace Alchemy.BlockEntity
                 CollectibleObject colObj = slot.Itemstack.Collectible;
                 if (colObj.Attributes != null && colObj.Attributes["herbrackable"].AsBool(false))
                 {
-                    AssetLocation sound = slot.Itemstack?.Block?.Sounds?.Place.Location;
+                    AssetLocation sound = slot.Itemstack?.Block?.Sounds?.Place;
 
                     if (TryPut(slot, blockSel))
                     {
@@ -128,7 +128,7 @@ namespace Alchemy.BlockEntity
                 ItemStack stack = inv[index].TakeOut(1);
                 if (byPlayer.InventoryManager.TryGiveItemstack(stack))
                 {
-                    AssetLocation sound = stack.Block?.Sounds?.Place.Location;
+                    AssetLocation sound = stack.Block?.Sounds?.Place;
                     Api.World.PlaySoundAt(
                         sound ?? new AssetLocation("sounds/player/build"),
                         byPlayer.Entity,
